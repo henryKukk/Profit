@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<jboss-web>
+    <context-root>/Profit</context-root>
+</jboss-web>
