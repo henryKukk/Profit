@@ -12,9 +12,7 @@ import java.io.IOException;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 
-/**
- * Created by henry on 12.03.16.
- */
+
 public class GetUsers extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

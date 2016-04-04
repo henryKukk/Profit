@@ -1,13 +1,6 @@
 package user;
 
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-/**
- * Created by henry on 17.03.16.
- */
 public class User {
     private String firstName = "";
     private String lastName = "";

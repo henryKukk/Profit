@@ -1,6 +1,4 @@
-/**
- * Created by henry on 12.03.16.
- */
+
 
 $(document).ready(function() {
     $("#dob").datepicker({

@@ -11,9 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import net.sf.xsshtmlfilter.HTMLFilter;
-/**
- * Created by henry on 17.03.16.
- */
+
 public class EditUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HTMLFilter cleaner = new HTMLFilter();

@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: henry
-  Date: 12.03.16
-  Time: 18:10
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
@@ -30,11 +24,7 @@
     <tbody id="users">
     </tbody>
   </table>
-<%--  <form action="/addUser/" method="POST" class="form-inline">
-    <input type="text" name="first_name" id="first_name" class="form-control">
-    <input type="text" name="last_name" id="last_name" class="form-control">
-    <input type="submit" id="add_user" value="Add User" class="btn btn-success">
-  </form>--%>
+
   <div id="addUserDiv">
   <button class='add_user btn btn-primary' data-toggle='modal' data-target='#addUser'>Add User</button>
   </div>

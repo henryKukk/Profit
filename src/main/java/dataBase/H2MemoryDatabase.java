@@ -5,9 +5,6 @@ package dataBase;
 
 import java.sql.*;
 
-/**
- * Created by henry on 10.03.16.
- */
 public class H2MemoryDatabase {
     private static final String DB_DRIVER = "org.h2.Driver";
     private static final String DB_CONNECTION = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1";

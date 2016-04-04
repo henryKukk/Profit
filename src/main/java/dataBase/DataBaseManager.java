@@ -9,9 +9,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 
-/**
- * Created by henry on 17.03.16.
- */
 public class DataBaseManager {
     public static H2MemoryDatabase dataBase = null;
 

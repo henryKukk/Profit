@@ -9,9 +9,6 @@ import java.sql.SQLException;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by henry on 28.03.16.
- */
 public class DataBaseManagerTest {
     DataBaseManager dataBase;
     @Before
