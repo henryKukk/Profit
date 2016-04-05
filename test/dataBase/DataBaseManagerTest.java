@@ -22,10 +22,10 @@ public class DataBaseManagerTest {
 
     @Test
     public void testAddUser() throws Exception {
-        User kasutaja = new User("Henry", "Kukk");
-        kasutaja.setPassword("Test");
-        kasutaja.setDateStamp("19/02/2015");
-        dataBase.addUser(kasutaja);
+        User customer = new User("Henry", "Kukk");
+        customer.setPassword("Test");
+        customer.setDateStamp("19/02/2015");
+        dataBase.addUser(customer);
         assertEquals(2, dataBase.getAllUsers().length());
     }
 
@@ -40,11 +40,11 @@ public class DataBaseManagerTest {
         kasutaja.setPassword("Test");
         kasutaja.setDateStamp("19/02/2015");
         dataBase.addUser(kasutaja);
-        User edit = new User("Testing", "One");
-        edit.setPassword("test");
-        edit.setDateStamp("1/1/2015");
-        edit.setUID(1);
-        dataBase.editUser(edit);
+        User editedUser = new User("Testing", "One");
+        editedUser.setPassword("test");
+        editedUser.setDateStamp("1/1/2015");
+        editedUser.setUID(1);
+        dataBase.editUser(editedUser);
         JSONObject userJSON = new JSONObject();
         userJSON.put("uid", 1);
         userJSON.put("firstname", "Testing");

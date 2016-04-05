@@ -1,3 +1,8 @@
+/*
+DEPRECATED!!!!
+
+
+
 package request;
 
 import dataBase.DataBaseManager;
@@ -31,3 +36,4 @@ public class GetUsers extends HttpServlet {
 
     }
 }
+*/

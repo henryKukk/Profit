@@ -1,3 +1,9 @@
+/*
+DEPRECATED!!!!
+
+
+
+
 package request;
 
 import dataBase.DataBaseFactory;
@@ -48,3 +54,4 @@ public class EditUser extends HttpServlet {
         response.getWriter().write(user.toString());
     }
 }
+*/

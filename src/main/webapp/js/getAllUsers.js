@@ -15,13 +15,14 @@ $(document).ready(function() {
         var dob = $('#dob').val();
         var username = $('#username').val();
         var password = $('#password').val();
-        $.post('adduser/', {
+        $.post('addcustomer.htm', {
             first_name: firstname,
             last_name: lastname,
             dob: dob,
             username: username,
             password: password
         }, function(response) {
+            console.log(response);
             $('#first_name').val("")
             $('#last_name').val("")
             $('#dob').val("");
@@ -37,7 +38,7 @@ $(document).ready(function() {
         var username = $('#username_edit').val();
         var password = $('#password_edit').val();
         var uid = $('#uid').val();
-        $.post('edituser/', {
+        $.post('/editcustomer.htm', {
             first_name: firstname,
             last_name: lastname,
             dob: dob,
@@ -58,7 +59,7 @@ $(document).ready(function() {
         console.log($(this).parent().parent().find('.uid').html());
         var uid = $(this).parent().parent().find('.uid').html();
         var data = {"uid": uid}
-        $.post('deleteuser', {userToDelete: uid}, function(response) {
+        $.post('deleteuser.htm', {userToDelete: uid}, function(response) {
             getAllUsers();
         })
     })
@@ -66,7 +67,8 @@ $(document).ready(function() {
     $(document).on('click','.edit_user' ,function() {
         var uid = $(this).parent().parent().find('.uid').html();
         var data = {"uid": uid}
-        $.get('edituser/', {userToEdit: uid}, function(response) {
+        $.get('getuserdata.htm', {userToEdit: uid}, function(response) {
+            var response = JSON.parse(response);
             $('#first_name_edit').val(response.firstname);
             $('#last_name_edit').val(response.lastname);
             $('#password_edit').val(response.password);
@@ -80,11 +82,12 @@ $(document).ready(function() {
 })
 
 function getAllUsers() {
-    $.get('getusers', {}, function(response) {
+    $.get('getallusers.htm', {}, function(response) {
         $('#users').empty();
         var deleteButton = "<button class='delete_user btn btn-danger'>Delete</button>";
         var editButton = "<button class='edit_user btn btn-primary' data-toggle='modal' data-target='#myModal'>Edit</button>";
-        $.each(response, function(key, value) {
+        var json = JSON.parse(response);
+        $.each(json, function(key, value) {
             $('#users').append("<tr><td>"+ value.firstName + "</td><td>" + value.lastName + "</td><td class='uid'>" + value.id + "</td>" +
                     "<td>" + value.dob + "</td>"+
                     "<td>" + value.username + "</td>" +

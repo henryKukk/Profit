@@ -46,7 +46,13 @@
       <artifactId>xss-html-filter</artifactId>
       <version>1.5</version> <!-- remember to check for newer versions -->
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.2.4.RELEASE</version>
+    </dependency>
   </dependencies>
+
   <repositories>
     <repository>
       <id>xss-html-filter releases</id>

@@ -1,3 +1,7 @@
+/*DEPRECATED!!!!
+
+
+
 package request;
 
 import dataBase.DataBaseFactory;
@@ -40,3 +44,4 @@ public class AddUser extends HttpServlet {
     }
 
 }
+*/

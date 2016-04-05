@@ -38,7 +38,6 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
     public String getName() {
         return this.firstName + " " + this.lastName;
     }

@@ -1,3 +1,9 @@
+/*
+
+DEPRECATED!!!!
+
+
+
 package request;
 
 import dataBase.DataBaseFactory;
@@ -26,3 +32,4 @@ public class DeleteUser extends HttpServlet {
 
     }
 }
+*/
