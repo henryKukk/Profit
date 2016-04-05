@@ -69,8 +69,8 @@ Assert Table Has Person
     Table Should Contain    xpath=//body/table    Testing
 
 Assert Page Doenst Have
-    Page Should Not Contain    Henry
-    Page Should Not Contain    Testing
+    Page Should Not Contain    EESUUS
+    Page Should Not Contain    PEREKONNAUUS
 
 Delete user
     Click Element    //*[@id="users"]/tr/td[7]/button
