@@ -38,13 +38,19 @@ $(document).ready(function() {
         if ($('#error_add').children().length > 0) {
             return;
         }
-        $.post('customer/add', {
+        var userInput = {
             first_name: firstname,
             last_name: lastname,
             dob: dob,
             username: username,
             password: password
-        }, function(response) {
+        };
+        $.ajax({
+            method: "PUT",
+            url: "customer/add",
+            data: userInput,
+
+        }).done(function(response) {
             $('#addUser').modal('hide');
             $('#first_name').val("")
             $('#last_name').val("")
@@ -53,7 +59,7 @@ $(document).ready(function() {
             $('#password').val("");
             getAllUsers();
         })
-    })
+    });
     $('#edit_user').click(function() {
         $('#error_edit').html("");
         var firstname = $('#first_name_edit').val();

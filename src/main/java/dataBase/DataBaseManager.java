@@ -12,11 +12,9 @@ import java.sql.*;
 public class DataBaseManager {
     public static H2MemoryDatabase dataBase = null;
 
-    public DataBaseManager() {
-        try {
+    public DataBaseManager() throws SQLException {
+        if (dataBase != null) {
             dataBase = new H2MemoryDatabase();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 

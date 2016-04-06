@@ -1,3 +1,7 @@
+/*
+DEPRECATED!!!!
+
+
 package dataBase;
 
 import java.sql.SQLException;
@@ -14,3 +18,4 @@ public class DataBaseFactory {
 
     }
 }
+*/
