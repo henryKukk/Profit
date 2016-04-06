@@ -33,7 +33,7 @@ public class CustomerController {
             return "ERROR: Error when trying to connect to database";
         }
     }
-    @RequestMapping(value="/add", method=RequestMethod.PUT)
+    @RequestMapping(value="/add", method=RequestMethod.POST)
     public @ResponseBody String addCustomer(HttpServletRequest request) {
         HTMLFilter cleaner = new HTMLFilter();
         User customer = null;
@@ -55,8 +55,10 @@ public class CustomerController {
             customer.setUserName(username);
             customer.setDateStamp(dob);
         } catch (NullPointerException e) {
+            e.printStackTrace();
             return "ERROR: Not all required fields given";
         } catch (InputMismatchException inputError) {
+            inputError.printStackTrace();
             return "ERROR: Input is not correct";
         }
 

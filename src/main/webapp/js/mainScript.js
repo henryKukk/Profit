@@ -47,7 +47,7 @@ $(document).ready(function() {
             password: password
         };
         $.ajax({
-            method: "PUT",
+            method: "POST",
             url: "customer/add",
             data: userInput,
 
