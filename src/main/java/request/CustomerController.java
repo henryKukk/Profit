@@ -22,7 +22,7 @@ import java.sql.SQLException;
 public class CustomerController {
 
 
-    @RequestMapping(value="/getallusers.htm", method= RequestMethod.GET)
+    @RequestMapping(value="/getall", method= RequestMethod.GET)
     public @ResponseBody String showCustomers() {
         try {
             DataBaseManager dbm = DataBaseFactory.getDataBase();
@@ -33,7 +33,7 @@ public class CustomerController {
         }
         return "Nothign";
     }
-    @RequestMapping(value="/addcustomer.htm", method=RequestMethod.POST)
+    @RequestMapping(value="/add", method=RequestMethod.POST)
     public @ResponseBody String addCustomer(HttpServletRequest request) {
         HTMLFilter cleaner = new HTMLFilter();
 
@@ -56,7 +56,7 @@ public class CustomerController {
         return "Failed adding customer";
     }
 
-    @RequestMapping(value="/editcustomer.htm", method=RequestMethod.POST)
+    @RequestMapping(value="/edit", method=RequestMethod.POST)
     public @ResponseBody String editCustomer(HttpServletRequest request) {
         HTMLFilter cleaner = new HTMLFilter();
         String firstName = cleaner.filter(request.getParameter("first_name"));
@@ -80,7 +80,7 @@ public class CustomerController {
         return "User edit failed";
     }
 
-    @RequestMapping(value="/getuserdata.htm", method=RequestMethod.GET)
+    @RequestMapping(value="/getcustomer", method=RequestMethod.GET)
     public @ResponseBody String getUserData(HttpServletRequest request) {
         String uid = (String) request.getParameter("userToEdit");
         JSONObject user = null;
@@ -94,7 +94,7 @@ public class CustomerController {
         }
         return "Error while getting user";
     }
-    @RequestMapping(value="/deleteuser.htm", method=RequestMethod.POST)
+    @RequestMapping(value="/delete", method=RequestMethod.POST)
     public @ResponseBody String userData(HttpServletRequest request) {
         String uid = request.getParameter("userToDelete");
         try {

@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f091671-808f-4ae1-b1c0-675416baa75b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/request/CustomerController.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/app-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/mainScript.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/request/AddUser.java" afterPath="$PROJECT_DIR$/src/main/java/request/AddUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/request/DeleteUser.java" afterPath="$PROJECT_DIR$/src/main/java/request/DeleteUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/request/EditUser.java" afterPath="$PROJECT_DIR$/src/main/java/request/EditUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/request/GetUsers.java" afterPath="$PROJECT_DIR$/src/main/java/request/GetUsers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/user/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/request/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/request/CustomerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/dataBase/DataBaseManagerTest.java" afterPath="$PROJECT_DIR$/test/dataBase/DataBaseManagerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
+    <list id="dedde747-4dd8-46a6-8299-2e4511ac0882" name="New changelist" comment="" />
     <ignored path="Proift.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,7 +26,7 @@
     <SUITE FILE_PATH="coverage/Proift$DataBaseManagerTest_testEditUser.coverage" NAME="DataBaseManagerTest.testEditUser Coverage Results" MODIFIED="1459762986391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dataBase.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Proift$DataBaseManagerTest.coverage" NAME="DataBaseManagerTest Coverage Results" MODIFIED="1459875195461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Proift$DataBaseManagerTest.coverage" NAME="DataBaseManagerTest Coverage Results" MODIFIED="1459929081145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dataBase.*</FILTER>
     </SUITE>
   </component>
@@ -48,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.2572899">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -61,76 +55,8 @@
       <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0833333">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataBaseManagerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/dataBase/DataBaseManagerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jboss-web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/request/CustomerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataBaseManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataBase/DataBaseManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6062603">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <marker date="1459764464944" expanded="true" signature="716:747" placeholder="DELETE FROM " />
-                <marker date="1459764464944" expanded="true" signature="1695:1785" placeholder="INSERT INTO CUSTOMER... " />
-                <marker date="1459764464944" expanded="true" signature="2583:2605" placeholder="select * fro... CUSTOMER" />
-                <marker date="1459764464944" expanded="true" signature="3520:3553" placeholder="SELECT * FRO... CUSTOMER" />
-                <marker date="1459764464944" expanded="true" signature="5057:5144" placeholder="UPDATE CUSTO... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataBaseFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dataBase/DataBaseFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getAllUsers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+            <state vertical-scroll-proportion="-9.375">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -139,18 +65,18 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+            <state vertical-scroll-proportion="-13.041667">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/app-config.xml">
+      <file leaf-file-name="mainScript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mainScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -188,13 +114,13 @@
         <option value="$PROJECT_DIR$/src/main/java/request/DeleteUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/request/EditUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/request/GetUsers.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/test/dataBase/DataBaseManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dataBase/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/app-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/request/CustomerController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/app-config.xml" />
       </list>
     </option>
   </component>
@@ -835,6 +761,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="8f091671-808f-4ae1-b1c0-675416baa75b" name="Default" comment="" />
+      <changelist id="dedde747-4dd8-46a6-8299-2e4511ac0882" name="New changelist" comment="" />
       <created>1459761851198</created>
       <option name="number" value="Default" />
       <updated>1459761851198</updated>
@@ -843,7 +770,7 @@
       <workItem from="1459762667141" duration="589000" />
       <workItem from="1459764032410" duration="2066000" />
       <workItem from="1459857876492" duration="5442000" />
-      <workItem from="1459875137738" duration="217000" />
+      <workItem from="1459875137738" duration="1956000" />
     </task>
     <task id="LOCAL-00001" summary="Tests added, POM fixed">
       <created>1459763243939</created>
@@ -863,13 +790,22 @@
       <option name="project" value="LOCAL" />
       <updated>1459764579842</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Basic spring framework implementaion.">
+      <created>1459875390562</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1459875390562</updated>
+    </task>
+    <task id="LOCAL-00005" summary="RobotUpdate">
+      <created>1459875909667</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1459875909667</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataBaseManagerTest - 2016.04.04 at 12h 41m 34s.xml">
-      <configuration name="DataBaseManagerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataBaseManagerTest - 2016.04.04 at 12h 41m 52s.xml">
       <configuration name="DataBaseManagerTest" configurationId="JUnit" />
     </history-entry>
@@ -891,6 +827,9 @@
     <history-entry file="DataBaseManagerTest - 2016.04.05 at 19h 53m 18s.xml">
       <configuration name="DataBaseManagerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DataBaseManagerTest - 2016.04.06 at 10h 51m 22s.xml">
+      <configuration name="DataBaseManagerTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="DataBaseManagerTest_testEditUser - 2016.04.04 at 12h 42m 26s.xml">
       <configuration name="DataBaseManagerTest.testEditUser" configurationId="JUnit" />
     </history-entry>
@@ -899,7 +838,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8676000" />
+    <option name="totallyTimeSpent" value="10415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
@@ -950,7 +889,9 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Tests added, POM fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests added, POM fixed" />
+    <MESSAGE value="Basic spring framework implementaion." />
+    <MESSAGE value="RobotUpdate" />
+    <option name="LAST_COMMIT_MESSAGE" value="RobotUpdate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -997,7 +938,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mainScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
@@ -1077,7 +1018,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mainScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1089,6 +1030,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,6 +1107,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1215,26 +1158,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/getAllUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.041667">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataBase/DataBaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33278418">
+          <caret line="125" column="16" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="16" />
+          <folding>
+            <marker date="1459764464944" expanded="true" signature="716:747" placeholder="DELETE FROM " />
+            <marker date="1459764464944" expanded="true" signature="1695:1785" placeholder="INSERT INTO CUSTOMER... " />
+            <marker date="1459764464944" expanded="true" signature="2583:2605" placeholder="select * fro... CUSTOMER" />
+            <marker date="1459764464944" expanded="true" signature="3520:3553" placeholder="SELECT * FRO... CUSTOMER" />
+            <marker date="1459764464944" expanded="true" signature="5057:5144" placeholder="UPDATE CUSTO... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataBase/DataBaseFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1247,18 +1196,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/dataBase/DataBaseManagerTest.java">
+    <entry file="file://$PROJECT_DIR$/TestingR.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0833333">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state vertical-scroll-proportion="-1.1243523">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1274,32 +1215,42 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/request/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataBase/DataBaseFactory.java">
+    <entry file="file://$PROJECT_DIR$/test/dataBase/DataBaseManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.098684214">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dataBase/DataBaseManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6062603">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <marker date="1459764464944" expanded="true" signature="716:747" placeholder="DELETE FROM " />
-            <marker date="1459764464944" expanded="true" signature="1695:1785" placeholder="INSERT INTO CUSTOMER... " />
-            <marker date="1459764464944" expanded="true" signature="2583:2605" placeholder="select * fro... CUSTOMER" />
-            <marker date="1459764464944" expanded="true" signature="3520:3553" placeholder="SELECT * FRO... CUSTOMER" />
-            <marker date="1459764464944" expanded="true" signature="5057:5144" placeholder="UPDATE CUSTO... " />
-          </folding>
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mainScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2572899">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

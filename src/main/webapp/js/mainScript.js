@@ -15,7 +15,7 @@ $(document).ready(function() {
         var dob = $('#dob').val();
         var username = $('#username').val();
         var password = $('#password').val();
-        $.post('addcustomer.htm', {
+        $.post('customer/add', {
             first_name: firstname,
             last_name: lastname,
             dob: dob,
@@ -38,7 +38,7 @@ $(document).ready(function() {
         var username = $('#username_edit').val();
         var password = $('#password_edit').val();
         var uid = $('#uid').val();
-        $.post('/editcustomer.htm', {
+        $.post('customer/edit', {
             first_name: firstname,
             last_name: lastname,
             dob: dob,
@@ -59,7 +59,7 @@ $(document).ready(function() {
         console.log($(this).parent().parent().find('.uid').html());
         var uid = $(this).parent().parent().find('.uid').html();
         var data = {"uid": uid}
-        $.post('deleteuser.htm', {userToDelete: uid}, function(response) {
+        $.post('customer/delete', {userToDelete: uid}, function(response) {
             getAllUsers();
         })
     })
@@ -67,7 +67,7 @@ $(document).ready(function() {
     $(document).on('click','.edit_user' ,function() {
         var uid = $(this).parent().parent().find('.uid').html();
         var data = {"uid": uid}
-        $.get('getuserdata.htm', {userToEdit: uid}, function(response) {
+        $.get('customer/getcustomer', {userToEdit: uid}, function(response) {
             var response = JSON.parse(response);
             $('#first_name_edit').val(response.firstname);
             $('#last_name_edit').val(response.lastname);
@@ -82,7 +82,7 @@ $(document).ready(function() {
 })
 
 function getAllUsers() {
-    $.get('getallusers.htm', {}, function(response) {
+    $.get('customer/getall', {}, function(response) {
         $('#users').empty();
         var deleteButton = "<button class='delete_user btn btn-danger'>Delete</button>";
         var editButton = "<button class='edit_user btn btn-primary' data-toggle='modal' data-target='#myModal'>Edit</button>";
