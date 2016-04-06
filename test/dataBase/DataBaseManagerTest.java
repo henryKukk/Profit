@@ -36,10 +36,10 @@ public class DataBaseManagerTest {
 
     @Test
     public void testEditUser() throws Exception {
-        User kasutaja = new User("Henry", "Kukk");
-        kasutaja.setPassword("Test");
-        kasutaja.setDateStamp("19/02/2015");
-        dataBase.addUser(kasutaja);
+        User customer = new User("Henry", "Kukk");
+        customer.setPassword("Test");
+        customer.setDateStamp("19/02/2015");
+        dataBase.addUser(customer);
         User editedUser = new User("Testing", "One");
         editedUser.setPassword("test");
         editedUser.setDateStamp("1/1/2015");

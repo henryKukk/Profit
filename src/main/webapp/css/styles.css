@@ -4,3 +4,8 @@
 .required {
     color:red;
 }
+
+.error {
+    color:red;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -29,7 +30,7 @@
   <button class='add_user btn btn-primary' data-toggle='modal' data-target='#addUser'>Add User</button>
   </div>
   </body>
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="editUser" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -39,6 +40,9 @@
           <h4 class="modal-title">Edit User</h4>
         </div>
         <div class="modal-body">
+            <div class="form-group">
+                <div class="error" id="error_edit"></div>
+            </div>
             <div class="form-group">
               <label for="uid">UID of the given user</label>
               <input type="text" class="form-control disabled" id="uid" name="uid" placeholder="UID"  required>
@@ -63,7 +67,7 @@
               <label for="last_name_edit">Password<span class="required"> *</span></label>
               <input type="password" class="form-control" id="password_edit" name="password_edit" placeholder="Password" required>
             </div>
-            <button value="Edit User" id="edit_user" class="btn btn-success" data-dismiss="modal">Edit user</button>
+            <button value="Edit User" id="edit_user" class="btn btn-success">Edit user</button>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -82,6 +86,9 @@
           <h4 class="modal-title">Add user</h4>
         </div>
         <div class="modal-body">
+            <div class="form-group">
+                <div class="error" id="error_add"></div>
+            </div>
             <div class="form-group">
               <label for="first_name_edit">First name<span class="required"> *</span></label>
               <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First name" required>
@@ -102,7 +109,7 @@
               <label for="last_name_edit">Password<span class="required"> *</span></label>
               <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             </div>
-            <button value="Add user" id='add_user' class="btn btn-success" data-dismiss="modal">Add User</button>
+            <button value="Add user" id='add_user' class="btn btn-success">Add User</button>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
