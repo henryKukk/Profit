@@ -27,7 +27,7 @@
   </table>
 
   <div id="addUserDiv">
-  <button class='add_user btn btn-primary' data-toggle='modal' data-target='#addUser'>Add User</button>
+  <button class='add_user btn btn-primary' id="toggle_add_user" data-toggle='modal' data-target='#addUser'>Add User</button>
   </div>
   </body>
   <div class="modal fade" id="editUser" role="dialog">

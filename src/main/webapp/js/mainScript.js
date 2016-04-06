@@ -1,7 +1,9 @@
 
 
 $(document).ready(function() {
-
+    $('#toggle_add_user').click(function() {
+        $('#error_add').html("");
+    })
 
     $("#dob").datepicker({
         dateFormat: "dd/mm/yy",
