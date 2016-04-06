@@ -13,7 +13,7 @@ public class DataBaseManager {
     public static H2MemoryDatabase dataBase = null;
 
     public DataBaseManager() throws SQLException {
-        if (dataBase != null) {
+        if (dataBase == null) {
             dataBase = new H2MemoryDatabase();
         }
     }
@@ -33,19 +33,19 @@ public class DataBaseManager {
 
     }
 
-    public void addUser(User user) throws SQLException {
+    public void addUser(User customer) throws SQLException {
         Connection connection = dataBase.getDBConnetcion();
-        String firstName = user.getFirstName();
-        String lastName = user.getLastName();
-        String userName = user.getUserName();
-        String password = user.getPassword();
+        String firstName = customer.getFirstName();
+        String lastName = customer.getLastName();
+        String userName = customer.getUserName();
+        String password = customer.getPassword();
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             password = (new HexBinaryAdapter()).marshal(md.digest(password.getBytes()));
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        String timestamp = user.getDateStamp();
+        String timestamp = customer.getDateStamp();
         Statement stmt = null;
         try {
             connection.setAutoCommit(false);
@@ -101,11 +101,13 @@ public class DataBaseManager {
             stmt.setInt(1, uid);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                user = new User(rs.getString("first_name"), rs.getString("last_name"));
+                user = new User();
                 user.setUID(rs.getInt("id"));
                 user.setUserName(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 user.setDateStamp(rs.getString("dob"));
+                user.setFirstName(rs.getString("first_name"));
+                user.setLastName(rs.getString("last_name"));
             }
             stmt.close();
         } catch (SQLException e) {
@@ -121,10 +123,10 @@ public class DataBaseManager {
         return userJSON;
     }
 
-    public void editUser(User user) {
+    public void editUser(User customer) {
         Connection connection = dataBase.getDBConnetcion();
         Statement stmt = null;
-        String password = user.getPassword();
+        String password = customer.getPassword();
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             password = (new HexBinaryAdapter()).marshal(md.digest(password.getBytes()));
@@ -134,12 +136,12 @@ public class DataBaseManager {
         try {
             stmt = connection.createStatement();
             PreparedStatement prepState = connection.prepareStatement("UPDATE CUSTOMER SET first_name=?, last_name=?, dob=?, username=?, password=? WHERE id=?");
-            prepState.setString(1, user.getFirstName());
-            prepState.setString(2, user.getLastName());
-            prepState.setString(3, user.getDateStamp());
-            prepState.setString(4, user.getUserName());
+            prepState.setString(1, customer.getFirstName());
+            prepState.setString(2, customer.getLastName());
+            prepState.setString(3, customer.getDateStamp());
+            prepState.setString(4, customer.getUserName());
             prepState.setString(5, password);
-            prepState.setInt(6, user.getUID());
+            prepState.setInt(6, customer.getUID());
             prepState.execute();
             prepState.close();
             stmt.close();

@@ -12,6 +12,7 @@ import user.User;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
+import java.util.InputMismatchException;
 
 /**
  * Created by henry on 5.04.16.
@@ -29,12 +30,13 @@ public class CustomerController {
             return String.valueOf(results);
         } catch (SQLException e) {
             e.printStackTrace();
-            return "Error when trying to connect to database";
+            return "ERROR: Error when trying to connect to database";
         }
     }
     @RequestMapping(value="/add", method=RequestMethod.PUT)
     public @ResponseBody String addCustomer(HttpServletRequest request) {
         HTMLFilter cleaner = new HTMLFilter();
+        User customer = null;
         String firstName;
         String lastName;
         String password;
@@ -46,13 +48,18 @@ public class CustomerController {
             username = cleaner.filter(request.getParameter("username"));
             password = cleaner.filter(request.getParameter("password"));
             dob = cleaner.filter(request.getParameter("dob"));
+            customer = new User();
+            customer.setFirstName(firstName);
+            customer.setLastName(lastName);
+            customer.setPassword(password);
+            customer.setUserName(username);
+            customer.setDateStamp(dob);
         } catch (NullPointerException e) {
-            return "Not all required fields given";
+            return "ERROR: Not all required fields given";
+        } catch (InputMismatchException inputError) {
+            return "ERROR: Input is not correct";
         }
-        User customer = new User(firstName, lastName);
-        customer.setPassword(password);
-        customer.setUserName(username);
-        customer.setDateStamp(dob);
+
         try {
             DataBaseManager dbm = new DataBaseManager();
             dbm.addUser(customer);
@@ -60,12 +67,13 @@ public class CustomerController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return "Failed adding customer";
+        return "ERROR: Failed adding customer";
     }
 
     @RequestMapping(value="/edit", method=RequestMethod.POST)
     public @ResponseBody String editCustomer(HttpServletRequest request) {
         HTMLFilter cleaner = new HTMLFilter();
+        User customer = null;
         String firstName;
         String lastName;
         int uid;
@@ -79,16 +87,21 @@ public class CustomerController {
             username = cleaner.filter(request.getParameter("username"));
             password = cleaner.filter(request.getParameter("password"));
             dob = cleaner.filter(request.getParameter("dob"));
+            customer = new User();
+            customer.setFirstName(firstName);
+            customer.setLastName(lastName);
+            customer.setUID(uid);
+            customer.setDateStamp(dob);
+            customer.setUserName(username);
+            customer.setPassword(password);
         } catch (NullPointerException e) {
-            return "Not all required fields given";
+            return "ERROR: Not all required fields given";
         } catch (NumberFormatException numberError) {
-            return "Error when trying to parse UID";
+            return "ERROR: Error when trying to parse UID";
+        } catch (InputMismatchException inputError) {
+            return "ERROR: Error in input";
         }
-        User customer = new User(firstName, lastName);
-        customer.setUID(uid);
-        customer.setDateStamp(dob);
-        customer.setUserName(username);
-        customer.setPassword(password);
+
         try {
             DataBaseManager dbm = new DataBaseManager();
             dbm.editUser(customer);
@@ -112,11 +125,11 @@ public class CustomerController {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            return "Error while trying to get user from DB";
+            return "ERROR: Error while trying to get user from DB";
         } catch (NumberFormatException numberError) {
-            return "UID is not a number";
+            return "ERROR: UID is not a number";
         } catch (NullPointerException nullpointer) {
-            return "UID not given";
+            return "ERROR: UID not given";
         }
     }
     @RequestMapping(value="/delete", method=RequestMethod.POST)
@@ -128,7 +141,7 @@ public class CustomerController {
             return "User delete success";
         } catch (SQLException e) {
             e.printStackTrace();
-            return "Error while trying to add user to DB";
+            return "ERROR: Error while trying to add user to DB";
         }
     }
     }

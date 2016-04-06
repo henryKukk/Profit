@@ -6,34 +6,35 @@ $(document).ready(function() {
     })
 
     $("#dob").datepicker({
-        dateFormat: "dd/mm/yy",
+        dateFormat: "mm/dd/yy",
         maxDate: new Date(),
     });
     $("#dob_edit").datepicker({
-        dateFormat: "dd/mm/yy",
+        dateFormat: "mm/dd/yy",
         maxDate: new Date(),
     });
     $('#add_user').click(function() {
         $('#error_add').html("");
         var firstname = $('#first_name').val();
-        if (firstname.length < 3) {
-            $('#error_add').append('<div>First name should be longer than 3 digits</div>');
+        if ((firstname.length < 3) || (firstname.length > 50)) {
+            $('#error_add').append('<div>First name length should be between 3 and 50 digits</div>');
         }
         var lastname = $('#last_name').val();
-        if (lastname.length < 3) {
-            $('#error_add').append('<div>Last name should be longer than 3 digits</div>');
+        if (lastname.length < 3 || lastname.length > 50) {
+            $('#error_add').append('<div>Last name length should be between 3 and 50 digits</div>');
         }
         var dob = $('#dob').val();
-        if (dob.lenght < 0) {
-            $('#error_add').append('<div>DOB not given</div>');
+        console.log(Date.parse(dob));
+        if (isNaN(Date.parse(dob))) {
+            $('#error_add').append('<div>Date of birth incorrect. Pattern should be mm/dd/yyyy</div>');
         }
         var username = $('#username').val();
-        if (username.length < 3) {
-            $('#error_add').append('<div>Username should be longer than 3 digits</div>');
+        if (username.length < 3 || dob.lenght > 50) {
+            $('#error_add').append('<div>Username length should be between 3 and 50 digits</div>');
         }
         var password = $('#password').val();
-        if (password.length < 6) {
-            $('#error_add').append('<div>Password should be longer than 6 digits</div>');
+        if (password.length < 6 || password.length > 50) {
+            $('#error_add').append('<div>Password length should be between 3 and 50 digit</div>');
         }
         if ($('#error_add').children().length > 0) {
             return;
@@ -51,6 +52,11 @@ $(document).ready(function() {
             data: userInput,
 
         }).done(function(response) {
+            console.log(response);
+            if (response.indexOf("ERROR:") > -1) {
+                window.alert(response);
+                return;
+            }
             $('#addUser').modal('hide');
             $('#first_name').val("")
             $('#last_name').val("")
@@ -63,24 +69,24 @@ $(document).ready(function() {
     $('#edit_user').click(function() {
         $('#error_edit').html("");
         var firstname = $('#first_name_edit').val();
-        if (firstname.length < 3) {
-            $('#error_edit').append('<div>First name should be longer than 3 digits</div>');
+        if (firstname.length < 3 || firstname.length > 50) {
+            $('#error_edit').append('<div>First name length should be between 3 and 50 digits</div>');
         }
         var lastname = $('#last_name_edit').val();
-        if (lastname.length < 3) {
-            $('#error_edit').append('<div>Last name should be longer than 3 digits</div>');
+        if (lastname.length < 3 || lastname.length > 50) {
+            $('#error_edit').append('<div>Last name length should be between 3 and 50 digits</div>');
         }
         var dob = $('#dob_edit').val();
-        if (dob.lenght < 0) {
-            $('#error_edit').append('<div>DOB not given</div>');
+        if (dob.length <= 0 || dob.length > 50) {
+            $('#error_edit').append('<div>Date of birth not given or input too long</div>');
         }
         var username = $('#username_edit').val();
-        if (username.length < 3) {
-            $('#error_edit').append('<div>Username should be longer than 3 digits</div>');
+        if (username.length < 3 || username.length > 50) {
+            $('#error_edit').append('<div>Username length should be between 3 and 50 digits</div>');
         }
         var password = $('#password_edit').val();
-        if (password.length < 6) {
-            $('#error_edit').append('<div>Password should be longer than 6 digits</div>');
+        if (password.length < 6 || password.length > 50) {
+            $('#error_edit').append('<div>Password length should be between 3 and 50 digit</div>');
         }
         if ($('#error_edit').children().length > 0) {
             return;

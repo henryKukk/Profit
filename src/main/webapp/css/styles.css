@@ -9,3 +9,9 @@
     color:red;
     font-family: 'Montserrat', sans-serif;
 }
+.description {
+    padding: 3px;
+    color:gray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}

@@ -1,26 +1,39 @@
 package user;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.InputMismatchException;
+
 public class User {
     private String firstName = "";
     private String lastName = "";
     private int UID;
     private String dateStamp;
-
+    private final String DATE_PATTERN = "MM/dd/yyyy";
 
     public String getDateStamp() {
         return dateStamp;
     }
 
-    public void setDateStamp (String dateStam) {
-        this.dateStamp = dateStam;
+    public void setDateStamp (String dateStamp) throws InputMismatchException {
+        SimpleDateFormat format = new SimpleDateFormat(DATE_PATTERN);
+        try {
+            format.parse(dateStamp);
+        } catch (ParseException parseError) {
+            throw new InputMismatchException();
+        }
+        this.dateStamp = dateStamp;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password) throws InputMismatchException {
+        if (password.length() < 6 || password.length() > 50) {
+            throw new InputMismatchException();
+        }
         this.password = password;
     }
 
@@ -28,19 +41,15 @@ public class User {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName(String userName) throws InputMismatchException{
+        if (userName.length() < 3 || userName.length() > 50) {
+            throw new InputMismatchException();
+        }
         this.userName = userName;
     }
 
     private String password;
     private String userName;
-    public User(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-    public String getName() {
-        return this.firstName + " " + this.lastName;
-    }
 
 
     public String getFirstName() {
@@ -57,5 +66,19 @@ public class User {
 
     public int getUID() {
         return UID;
+    }
+
+    public void setLastName(String lastName) throws InputMismatchException {
+        if (lastName.length() < 3 || lastName.length() > 50) {
+            throw new InputMismatchException();
+        }
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) throws InputMismatchException {
+        if (firstName.length() < 3 || firstName.length() > 50) {
+            throw new InputMismatchException();
+        }
+        this.firstName = firstName;
     }
 }

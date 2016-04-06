@@ -50,22 +50,27 @@
             <div class="form-group">
               <label for="first_name_edit">First name<span class="required"> *</span></label>
               <input type="text" class="form-control" id="first_name_edit" name="first_name_edit" placeholder="First name" required>
+                <div class="description">Should be between 3 and 32 characters long</div>
             </div>
             <div class="form-group">
               <label for="last_name_edit">Last name<span class="required"> *</span></label>
               <input type="text" class="form-control" id="last_name_edit" name="last_name_edit" placeholder="Last name" required>
+                <div class="description">Should be between 3 and 32 characters long</div>
             </div>
             <div class="form-group">
               <label for="last_name_edit">Date of birth<span class="required"> *</span></label>
               <input type="text" class="form-control" id="dob_edit" name="dob_edit" placeholder="Date of birth" required>
+                <div class="description">Date format mm/dd/yyyy. Use datepicker</div>
             </div>
             <div class="form-group">
               <label for="last_name_edit">Username<span class="required"> *</span></label>
               <input type="text" class="form-control" id="username_edit" name="username_edit" placeholder="Username" required>
+                <div class="description">Should be between 3 and 32 characters long</div>
             </div>
             <div class="form-group">
               <label for="last_name_edit">Password<span class="required"> *</span></label>
               <input type="password" class="form-control" id="password_edit" name="password_edit" placeholder="Password" required>
+                <div class="description">Should be between 3 and 32 characters long</div>
             </div>
             <button value="Edit User" id="edit_user" class="btn btn-success">Edit user</button>
         </div>
@@ -92,22 +97,27 @@
             <div class="form-group">
               <label for="first_name_edit">First name<span class="required"> *</span></label>
               <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First name" required>
+                <div class="description">Should be between 3 and 32 characters long</div>
             </div>
             <div class="form-group">
               <label for="last_name_edit">Last name<span class="required"> *</span></label>
               <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last name" required>
+                <div class="description">Should be between 3 and 32 characters long</div>
             </div>
             <div class="form-group">
               <label for="last_name_edit">Date of birth<span class="required"> *</span></label>
               <input type="text" class="form-control" id="dob" name="dob" placeholder="Last name" required>
+                <div class="description">Date format mm/dd/yyyy. Use datepicker</div>
             </div>
             <div class="form-group">
               <label for="last_name_edit">Username<span class="required"> *</span></label>
               <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                <div class="description">Should be between 3 and 32 characters long</div>
             </div>
             <div class="form-group">
               <label for="last_name_edit">Password<span class="required"> *</span></label>
               <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                <div class="description">Should be between 3 and 32 characters long</div>
             </div>
             <button value="Add user" id='add_user' class="btn btn-success">Add User</button>
         </div>

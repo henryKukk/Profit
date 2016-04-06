@@ -18,7 +18,7 @@ public class H2MemoryDatabase {
         try {
             if (!(rs.next())) {
                 stmt = connection.createStatement();
-                stmt.execute("CREATE TABLE CUSTOMER(id int primary key auto_increment, first_name varchar(255), last_name varchar(255), dob VARCHAR(255), username varchar(255), password varchar(255))");
+                stmt.execute("CREATE TABLE CUSTOMER(id int primary key auto_increment, first_name varchar(50), last_name varchar(50), dob VARCHAR(50), username varchar(50), password varchar(50))");
                 stmt.close();
             }
         } catch (SQLException e) {

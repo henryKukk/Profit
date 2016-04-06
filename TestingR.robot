@@ -26,19 +26,19 @@ AddEmptyTest
     sleep    ${Delay}
     Add User
     Add User Empty Fields Assert
-    Click Element   //*[@id="addUser"]/div/div/div[3]/button
+    Click Element    //*[@id="addUser"]/div/div/div[3]/button
 
 EditEmptyTest
     sleep    ${Delay}
     Edit User Empty Fields
+    Check Empty Edit
     Assert Table Has Person
-    Click Element   //*[@id="editUser"]/div/div/div[3]/button
+    Click Element    //*[@id="editUser"]/div/div/div[3]/button
 
 EditTest
     sleep    ${Delay}
     Edit user
     Check Edit
-
 
 DeleteTest
     sleep    ${Delay}
@@ -48,15 +48,16 @@ DeleteTest
 
 *** Keywords ***
 Add User Empty Fields Assert
-    Page Should Contain    First name should be longer than 3 digits
-    Page Should Contain    Last name should be longer than 3 digits
-    Page Should Contain    Username should be longer than 3 digits
-    Page Should Contain    Password should be longer than 6 digits
+    Page Should Contain    First name length should be between 3 and 50 digits
+    Page Should Contain    Last name length should be between 3 and 50 digits
+    Page Should Contain    Date of birth incorrect. Pattern should be mm/dd/yyyy
+    Page Should Contain    Username length should be between 3 and 50 digits
+    Page Should Contain    Password length should be between 3 and 50 digit
 
 Edit User Empty Fields
     Click Element    //*[@id="users"]/tr/td[8]/button
     sleep    1s
-    Input Text    first_name_edit   ""
+    Input Text    first_name_edit    ""
     Input Text    last_name_edit    ""
     Click Element    //*[@id="edit_user"]
 
@@ -67,8 +68,8 @@ Check Edit
     Table Should Contain    xpath=//body/table    PEREKONNAUUS
 
 Check EmptyEdit
-    Page Should Containt    First name should be longer than 3 digits
-    Page Should Containt    Last name should be longer than 3 digits
+    Page Should Contain    First name length should be between 3 and 50 digits
+    Page Should Contain    Last name length should be between 3 and 50 digits
 
 Edit user
     Click Element    //*[@id="users"]/tr/td[8]/button
