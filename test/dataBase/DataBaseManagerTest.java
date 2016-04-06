@@ -14,7 +14,7 @@ public class DataBaseManagerTest {
     @Before
     public void setUp() {
         try {
-            dataBase = DataBaseFactory.getDataBase();
+            dataBase = new DataBaseManager();
         } catch (SQLException e) {
             System.err.println("Error with database " + e.getMessage());
         }
@@ -22,8 +22,10 @@ public class DataBaseManagerTest {
 
     @Test
     public void testAddUser() throws Exception {
-        User customer = new User("Henry", "Kukk");
-        customer.setPassword("Test");
+        User customer = new User();
+        customer.setFirstName("Henry");
+        customer.setLastName("Kukk");
+        customer.setPassword("Test12345");
         customer.setDateStamp("19/02/2015");
         dataBase.addUser(customer);
         assertEquals(2, dataBase.getAllUsers().length());
@@ -36,21 +38,27 @@ public class DataBaseManagerTest {
 
     @Test
     public void testEditUser() throws Exception {
-        User customer = new User("Henry", "Kukk");
-        customer.setPassword("Test");
+        User customer = new User();
+        customer.setFirstName("Henry");
+        customer.setLastName("Kukk");
+        customer.setPassword("Test1234566");
         customer.setDateStamp("19/02/2015");
         dataBase.addUser(customer);
-        User editedUser = new User("Testing", "One");
-        editedUser.setPassword("test");
+        User editedUser = new User();
+        editedUser.setLastName("One");
+        editedUser.setFirstName("TestingOne");
+        editedUser.setUserName("usernameTest");
+        editedUser.setPassword("test123456");
         editedUser.setDateStamp("1/1/2015");
         editedUser.setUID(1);
         dataBase.editUser(editedUser);
         JSONObject userJSON = new JSONObject();
         userJSON.put("uid", 1);
-        userJSON.put("firstname", "Testing");
+        userJSON.put("firstname", "TestingOne");
         userJSON.put("lastname", "One");
-        userJSON.put("password", "098F6BCD4621D373CADE4E832627B4F6");
+        userJSON.put("password", "47EC2DD791E31E2EF2076CAF64ED9B3D");
         userJSON.put("dob", "1/1/2015");
+        userJSON.put("username", "usernameTest");
         assertEquals(userJSON.toString(), dataBase.getUserData(1).toString());
     }
 
