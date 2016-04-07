@@ -9,7 +9,7 @@ ${Username}       testUser
 ${date}           2016/03/03
 ${Browser}        Firefox
 ${SiteUrl}        http://localhost:8080
-${Delay}          2s
+${Delay}          1s
 
 *** Test Cases ***
 AddUserTest
@@ -22,6 +22,7 @@ AddUserTest
     Assert Table Has Person
 
 AddEmptyTest
+    sleep    ${Delay}
     Click Element    //*[@id="addUserDiv"]/button
     sleep    ${Delay}
     Add User
