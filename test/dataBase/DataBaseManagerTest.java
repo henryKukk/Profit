@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import static org.junit.Assert.*;
 
 public class DataBaseManagerTest {
-    DataBaseManager dataBase;
+    private DataBaseManager dataBase;
     @Before
     public void setUp() {
         try {

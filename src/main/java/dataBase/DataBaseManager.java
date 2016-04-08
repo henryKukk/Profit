@@ -10,7 +10,7 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 
 public class DataBaseManager {
-    public static H2MemoryDatabase dataBase = null;
+    public static H2MemoryDatabase dataBase;
 
     public DataBaseManager() throws SQLException {
         if (dataBase == null) {
