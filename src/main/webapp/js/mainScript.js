@@ -24,7 +24,6 @@ $(document).ready(function() {
             $('#error_add').append('<div>Last name length should be between 3 and 50 digits</div>');
         }
         var dob = $('#dob').val();
-        console.log(Date.parse(dob));
         if (isNaN(Date.parse(dob))) {
             $('#error_add').append('<div>Date of birth incorrect. Pattern should be mm/dd/yyyy</div>');
         }

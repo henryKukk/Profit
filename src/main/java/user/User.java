@@ -11,7 +11,8 @@ public class User {
     private int UID;
     private String dateStamp;
     private final String DATE_PATTERN = "MM/dd/yyyy";
-
+    private String password;
+    private String userName;
     public String getDateStamp() {
         return dateStamp;
     }
@@ -48,8 +49,6 @@ public class User {
         this.userName = userName;
     }
 
-    private String password;
-    private String userName;
 
 
     public String getFirstName() {
