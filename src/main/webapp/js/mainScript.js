@@ -98,7 +98,6 @@ $(document).ready(function() {
             password: password,
             uid: uid
         }, function(response) {
-            console.log(response);
             if (response.indexOf("ERROR:") > -1) {
                 window.alert(response);
                 return;
