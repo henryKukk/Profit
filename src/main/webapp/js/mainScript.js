@@ -51,7 +51,6 @@ $(document).ready(function() {
             data: userInput,
 
         }).done(function(response) {
-            console.log(response);
             if (response.indexOf("ERROR:") > -1) {
                 window.alert(response);
                 return;
@@ -99,6 +98,11 @@ $(document).ready(function() {
             password: password,
             uid: uid
         }, function(response) {
+            console.log(response);
+            if (response.indexOf("ERROR:") > -1) {
+                window.alert(response);
+                return;
+            }
             $('#editUser').modal('hide');
             $('#first_name_edit').val("")
             $('#last_name_edit').val("")
